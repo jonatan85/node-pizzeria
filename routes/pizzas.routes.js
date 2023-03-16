@@ -10,7 +10,7 @@ const upload = require('../utils/middleware/file.middleware.js');
 const pizzasRouter = express.Router();
 
 pizzasRouter.get('/', (req, res) => {
-    res.send('Esta es la lista de pizzas');
+    res.send('Esta es la lista de pizzas ricas');
 });
 
 module.exports = pizzasRouter;
