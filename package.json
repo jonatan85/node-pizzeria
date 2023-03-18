@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "star:live": "nodemon index.js",
+    "start:live": "nodemon index.js",
     "populate:pizzas": "node ./utils/seeds/pizzas.seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

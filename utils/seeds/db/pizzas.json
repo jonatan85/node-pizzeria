@@ -1,9 +1,9 @@
 [
   {
     "name": "Barbacoa",
-    "masa": "fina",
-    "tamaño": "familiar",
-    "salsa": "barbacoa",
+    "mass": "fina",
+    "size": "familiar",
+    "dip": "barbacoa",
     "ingredientes": "champiñon",
     "price": 22,
     "account": 1

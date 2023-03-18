@@ -11,11 +11,13 @@ const connect = require('./utils/db/connect.js');
 
 const pizzasRouter = require('./routes/pizzas.routes.js');
 const userRouter = require('./routes/user.routes.js');
+const ingredientsRouter = require('./routes/ingredients.routes.js');
+const orderRouter = require('./routes/order.routes.js');
 const DB_URL = process.env.DB_URL;
 
 connect();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const server = express();
 
 cloudinary.config({ 
@@ -52,8 +54,15 @@ server.use(session({
 server.use(passport.initialize());
 server.use(passport.session());
 
-server.use('pizzas', pizzasRouter);
-server.use('user', userRouter);
+server.get('/', (req,res) => {
+    res.json("Bienvenido a la TRADIZIONALE!");
+});
+
+server.use('/pizzas', pizzasRouter);
+server.use('/user', userRouter);
+server.use('/ingredients', ingredientsRouter);
+server.use('/order', orderRouter);
+
 
 server.use((err, req, res, next) => {
     return res.status(err.status || 500).json(err.message || 'Unexpected error');

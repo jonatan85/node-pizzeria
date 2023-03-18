@@ -3,7 +3,7 @@ const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 
-const User = require('../models/Users.js');
+const User = require('../models/User.js');
 const getJWT = require('../utils/authentication/jsonwebtoken');
 const createError = require('../utils/errors/create-error.js');
 
