@@ -3,11 +3,12 @@ const mongoose = require('mongoose');
 const customerOrderSchema = new mongoose.Schema(
     {
         order: {type: mongoose.Types.ObjectId, ref: 'Order', require: true},
-        name: {type: String, require: true},
-        surname: {type: String, require: true},
-        email: {type: String, require: true},
-        phoneNumber: {type: Number, require: true},
-        shippingAddress: {type: String, require: true}
+        name: {type: mongoose.Types.ObjectId, ref: 'UserData', require: true},
+        surname: {type: mongoose.Types.ObjectId, ref: 'UserData', require: true},
+        email: {type: mongoose.Types.ObjectId, ref: 'UserData', require: true},
+        phoneNumber: {type: mongoose.Types.ObjectId, ref: 'UserData', require: true},
+        shippingAddress: {type: String},
+        storePickud: {type: mongoose.Types.ObjectId, ref: 'PizzeriaStore'}
     },
     {
         timestamps: true

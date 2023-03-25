@@ -5,7 +5,7 @@ const customerOrder = express.Router();
 
 customerOrder.get('/', async(req, res) => {
     try{
-        const customerOrder = await CustomerOrder.find().populate('order');
+        const customerOrder = await CustomerOrder.find().populate('order', 'name', 'surname', 'email', 'phoneNumber');
         return res.status(200).json(customerOrder);
     } catch(err) {
         next(err);
