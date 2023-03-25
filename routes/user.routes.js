@@ -65,7 +65,7 @@ userRouter.post('/logout', (req, res, next) => {
 userRouter.get('/all-user', async (req, res, next) => {
     try{
         const email = req.query.email;
-       const user = await User.find(email);
+       const user = await User.find();
        return res.status(200).json(user);
     }catch(err) {
        next(err);

@@ -13,6 +13,7 @@ const pizzasRouter = require('./routes/pizzas.routes.js');
 const userRouter = require('./routes/user.routes.js');
 const ingredientsRouter = require('./routes/ingredients.routes.js');
 const orderRouter = require('./routes/order.routes.js');
+const customerOrderRouter = require('./routes/customerOrder.routes.js');
 const DB_URL = process.env.DB_URL;
 
 connect();
@@ -62,6 +63,7 @@ server.use('/pizzas', pizzasRouter);
 server.use('/user', userRouter);
 server.use('/ingredients', ingredientsRouter);
 server.use('/order', orderRouter);
+server.use('/customer-order', customerOrderRouter);
 
 
 server.use((err, req, res, next) => {
