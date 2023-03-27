@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
   items: [
-      {
+      { type:String}
+        /*
       pizza: {
           type: mongoose.Schema.Types.ObjectId,
           ref: 'Pizza',
@@ -16,7 +17,7 @@ const orderSchema = new mongoose.Schema({
           type: Number,
           required: true
         }
-      }
+      }*/
   ],
   total: {
     type: Number,
